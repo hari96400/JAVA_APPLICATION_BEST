@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo "uploading to ECR "
                 sh '$(aws ecr get-login --no-include-email --region ap-south-1)'
-                sh 'docker tag firstrepo:latest 220454890480.dkr.ecr.ap-south-1.amazonaws.com/firstrepo:latest'
+                sh 'docker tag javaimage:latest 220454890480.dkr.ecr.ap-south-1.amazonaws.com/firstrepo:latest'
                 sh 'docker push 220454890480.dkr.ecr.ap-south-1.amazonaws.com/firstrepo:latest'
                 
             }

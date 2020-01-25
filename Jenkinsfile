@@ -33,8 +33,8 @@ pipeline {
             steps {
                  echo "Deploying imgae to EKS"
                  sh 'rm -rf /var/lib/jenkins/.kube/ && aws eks update-kubeconfig --name MYCLUSTER'
-                 sh 'kubectl apply -f deploy.yaml'
-                 sh 'kubectl apply -f service.yaml'
+                 sh 'kubectl apply -f appdp.yaml'
+                 sh 'kubectl apply -f appsv.yaml'
             }
         }
 }
